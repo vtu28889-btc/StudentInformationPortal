@@ -200,9 +200,9 @@ function showDetails(name) {
             ${data.documents.map(item => `<li>${item}</li>`).join("")}
         </ul>
 
-        <button class="apply-btn" onclick="alert('Application feature will be added with backend database')">
-            Apply Now
-        </button>
+        <button class="apply-btn" onclick="openApplyModal('${name}')">
+    Apply Now
+</button>
     `;
 
     document.getElementById("detailsModal").style.display = "block";
