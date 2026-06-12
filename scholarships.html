@@ -90,10 +90,36 @@
     </div>
 </section>
 
-<div id="detailsModal" class="modal">
+<div id="applyModal" class="modal">
     <div class="modal-content">
-        <span onclick="closeModal()" class="close">&times;</span>
-        <div id="modalData"></div>
+        <span onclick="closeApplyModal()" class="close">&times;</span>
+
+        <h2>Scholarship Application Form</h2>
+
+        <form id="applicationForm">
+            <input type="hidden" id="applyScholarshipName">
+
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="email" id="studentEmail" placeholder="Email Address" required>
+            <input type="text" id="studentPhone" placeholder="Phone Number" required>
+            <input type="text" id="studentCourse" placeholder="Course" required>
+            <input type="number" id="studentMarks" placeholder="Marks Percentage" required>
+            <input type="number" id="studentIncome" placeholder="Family Income" required>
+
+            <select id="studentCategory" required>
+                <option value="">Select Category</option>
+                <option>General</option>
+                <option>OBC</option>
+                <option>SC</option>
+                <option>ST</option>
+            </select>
+
+            <textarea id="studentAddress" placeholder="Address" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <div id="applyResult"></div>
     </div>
 </div>
 
