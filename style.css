@@ -2,29 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     background: #f2f6ff;
     color: #222;
 }
 
-header {
+.main-header {
     background: linear-gradient(135deg, #004aad, #00b4d8);
     color: white;
     text-align: center;
-    padding: 35px;
+    padding: 35px 20px;
 }
 
-header h1 {
+.main-header h1 {
     font-size: 35px;
 }
 
 nav {
     background: #023e8a;
     text-align: center;
-    padding: 12px;
+    padding: 13px;
 }
 
 nav a {
@@ -39,42 +39,46 @@ nav a:hover {
 }
 
 .hero {
-    text-align: center;
-    padding: 60px 20px;
     background: white;
+    text-align: center;
+    padding: 70px 20px;
 }
 
 .hero h2 {
-    font-size: 32px;
     color: #004aad;
+    font-size: 34px;
 }
 
 .hero p {
+    font-size: 18px;
     margin: 20px auto;
     max-width: 700px;
-    font-size: 18px;
 }
 
+.hero-btn,
 button {
     background: #0077b6;
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 12px 22px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
 }
 
+.hero-btn:hover,
 button:hover {
     background: #023e8a;
 }
 
 .box {
     background: white;
+    width: 88%;
     margin: 30px auto;
     padding: 30px;
-    width: 85%;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
@@ -89,8 +93,9 @@ form {
     gap: 15px;
 }
 
-input, select {
-    padding: 12px;
+input,
+select {
+    padding: 13px;
     border: 1px solid #aaa;
     border-radius: 8px;
     font-size: 16px;
@@ -100,7 +105,6 @@ input, select {
     margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
-    font-size: 17px;
 }
 
 .success {
@@ -111,35 +115,6 @@ input, select {
 .warning {
     background: #fff3cd;
     color: #856404;
-}
-
-#searchBox {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.scholarship-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px;
-}
-
-.card {
-    background: #eaf4ff;
-    padding: 20px;
-    border-left: 6px solid #0077b6;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-    background: #dbeeff;
-}
-
-.card h3 {
-    color: #023e8a;
-    margin-bottom: 10px;
 }
 
 .checklist {
@@ -154,6 +129,121 @@ input, select {
     border-radius: 8px;
 }
 
+.search-area {
+    margin-bottom: 20px;
+}
+
+.search-area input {
+    width: 100%;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    border-radius: 20px;
+    background: #eaf4ff;
+    color: #023e8a;
+    border: 1px solid #0077b6;
+}
+
+.filter-buttons button:hover {
+    background: #0077b6;
+    color: white;
+}
+
+.scholarship-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.scholar-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.scholar-card:hover {
+    transform: translateY(-6px);
+}
+
+.scholar-card h3 {
+    color: #023e8a;
+    margin-bottom: 10px;
+}
+
+.scholar-card p {
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    background: #d8f3dc;
+    color: #1b4332;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 70px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 14px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 30px;
+    cursor: pointer;
+    color: red;
+}
+
+.modal-content h2 {
+    color: #004aad;
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.apply-btn {
+    background: #2d6a4f;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background: #1b4332;
+}
+
 footer {
     background: #023e8a;
     color: white;
@@ -163,7 +253,7 @@ footer {
 }
 
 @media(max-width: 600px) {
-    header h1 {
+    .main-header h1 {
         font-size: 25px;
     }
 
@@ -175,15 +265,8 @@ footer {
     .box {
         width: 95%;
     }
-}
 
-.view-link{
-    text-decoration:none;
-    color:#0077b6;
-    font-weight:bold;
-}
-
-.view-link:hover{
-    color:#023e8a;
-    text-decoration:underline;
+    .modal-content {
+        width: 92%;
+    }
 }
