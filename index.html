@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Scholarship Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎯 Student Scholarship Finder</h1>
+    <p>Find scholarships based on your eligibility</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#checker">Eligibility Checker</a>
+    <a href="#scholarships">Scholarships</a>
+    <a href="#documents">Documents</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Never Miss a Scholarship Again!</h2>
+    <p>This website helps students find suitable scholarships based on marks, income, category, course, and state.</p>
+    <button onclick="scrollToChecker()">Check Eligibility</button>
+</section>
+
+<section id="checker" class="box">
+    <h2>Eligibility Checker</h2>
+
+    <form id="eligibilityForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <select id="course" required>
+            <option value="">Select Course</option>
+            <option value="BTech">BTech</option>
+            <option value="Degree">Degree</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Diploma">Diploma</option>
+        </select>
+
+        <input type="number" id="marks" placeholder="Marks Percentage" required>
+        <input type="number" id="income" placeholder="Family Income per year" required>
+
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+
+        <select id="state" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Karnataka">Karnataka</option>
+        </select>
+
+        <button type="submit">Check Scholarships</button>
+    </form>
+
+    <div id="result"></div>
+</section>
+
+<section id="scholarships" class="box">
+    <h2>Available Scholarships</h2>
+
+    <input type="text" id="searchBox" placeholder="Search scholarship..." onkeyup="searchScholarship()">
+
+    <div class="scholarship-container" id="scholarshipList">
+
+        <div class="card">
+            <h3>Merit Scholarship</h3>
+            <p>For students with marks above 85%.</p>
+            <p><b>Deadline:</b> 30 August 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Government Post Matric Scholarship</h3>
+            <p>For SC/ST/OBC students with low family income.</p>
+            <p><b>Deadline:</b> 15 September 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Girl Student Education Scholarship</h3>
+            <p>Special scholarship for girl students.</p>
+            <p><b>Deadline:</b> 10 October 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Engineering Student Scholarship</h3>
+            <p>For BTech students with good academic performance.</p>
+            <p><b>Deadline:</b> 25 September 2026</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="documents" class="box">
+    <h2>Required Documents Checklist</h2>
+
+    <ul class="checklist">
+        <li><input type="checkbox"> Aadhaar Card</li>
+        <li><input type="checkbox"> Income Certificate</li>
+        <li><input type="checkbox"> Caste Certificate</li>
+        <li><input type="checkbox"> Bonafide Certificate</li>
+        <li><input type="checkbox"> Bank Passbook</li>
+        <li><input type="checkbox"> Marks Memo</li>
+        <li><input type="checkbox"> Passport Size Photo</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 Student Scholarship Finder | Social Impact Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
