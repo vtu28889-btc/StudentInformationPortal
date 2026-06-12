@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Scholarships</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>🎓 Available Scholarships</h1>
+    <p>Search and view scholarship details</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="scholarships.html">Scholarships</a>
+</nav>
+
+<section class="box">
+    <h2>Find Scholarships</h2>
+
+    <div class="search-area">
+        <input type="text" id="searchBox" placeholder="Search scholarships..." onkeyup="searchScholarship()">
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterScholarships('all')">All</button>
+        <button onclick="filterScholarships('Merit')">Merit</button>
+        <button onclick="filterScholarships('Government')">Government</button>
+        <button onclick="filterScholarships('Engineering')">Engineering</button>
+        <button onclick="filterScholarships('Girls')">Girls</button>
+    </div>
+
+    <div class="scholarship-container">
+
+        <div class="scholar-card" data-category="Merit">
+            <h3>Merit Scholarship 2026</h3>
+            <span class="tag">Merit</span>
+            <p><b>Eligibility:</b> 85% and above marks</p>
+            <p><b>Reward:</b> Up to ₹50,000</p>
+            <p><b>Deadline:</b> 30 August 2026</p>
+            <button onclick="showDetails('Merit Scholarship 2026')">View Details</button>
+        </div>
+
+        <div class="scholar-card" data-category="Government">
+            <h3>Post Matric Scholarship</h3>
+            <span class="tag">Government</span>
+            <p><b>Eligibility:</b> SC/ST/OBC students</p>
+            <p><b>Reward:</b> Tuition fee support</p>
+            <p><b>Deadline:</b> 15 September 2026</p>
+            <button onclick="showDetails('Post Matric Scholarship')">View Details</button>
+        </div>
+
+        <div class="scholar-card" data-category="Girls">
+            <h3>Girl Student Education Scholarship</h3>
+            <span class="tag">Girls</span>
+            <p><b>Eligibility:</b> Girl students</p>
+            <p><b>Reward:</b> Up to ₹40,000</p>
+            <p><b>Deadline:</b> 10 October 2026</p>
+            <button onclick="showDetails('Girl Student Education Scholarship')">View Details</button>
+        </div>
+
+        <div class="scholar-card" data-category="Engineering">
+            <h3>Engineering Student Scholarship</h3>
+            <span class="tag">Engineering</span>
+            <p><b>Eligibility:</b> B.Tech students</p>
+            <p><b>Reward:</b> Up to ₹60,000</p>
+            <p><b>Deadline:</b> 25 September 2026</p>
+            <button onclick="showDetails('Engineering Student Scholarship')">View Details</button>
+        </div>
+
+        <div class="scholar-card" data-category="Government">
+            <h3>Minority Scholarship</h3>
+            <span class="tag">Government</span>
+            <p><b>Eligibility:</b> Minority students</p>
+            <p><b>Reward:</b> Up to ₹30,000</p>
+            <p><b>Deadline:</b> 5 November 2026</p>
+            <button onclick="showDetails('Minority Scholarship')">View Details</button>
+        </div>
+
+        <div class="scholar-card" data-category="Merit">
+            <h3>Low Income Student Support Scholarship</h3>
+            <span class="tag">Merit</span>
+            <p><b>Eligibility:</b> Family income below ₹1.5 lakh</p>
+            <p><b>Reward:</b> Up to ₹25,000</p>
+            <p><b>Deadline:</b> 20 November 2026</p>
+            <button onclick="showDetails('Low Income Student Support Scholarship')">View Details</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <div id="modalData"></div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Student Scholarship Finder</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
