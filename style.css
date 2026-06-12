@@ -176,3 +176,14 @@ footer {
         width: 95%;
     }
 }
+
+.view-link{
+    text-decoration:none;
+    color:#0077b6;
+    font-weight:bold;
+}
+
+.view-link:hover{
+    color:#023e8a;
+    text-decoration:underline;
+}
