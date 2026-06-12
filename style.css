@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f6ff;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #004aad, #00b4d8);
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+nav {
+    background: #023e8a;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd60a;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #004aad;
+}
+
+.hero p {
+    margin: 20px auto;
+    max-width: 700px;
+    font-size: 18px;
+}
+
+button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #023e8a;
+}
+
+.box {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 85%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 25px;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.success {
+    background: #d8f3dc;
+    color: #1b4332;
+}
+
+.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+#searchBox {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.scholarship-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #eaf4ff;
+    padding: 20px;
+    border-left: 6px solid #0077b6;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background: #dbeeff;
+}
+
+.card h3 {
+    color: #023e8a;
+    margin-bottom: 10px;
+}
+
+.checklist {
+    list-style: none;
+    font-size: 18px;
+}
+
+.checklist li {
+    background: #f1f8ff;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .box {
+        width: 95%;
+    }
+}
