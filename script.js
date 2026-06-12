@@ -211,3 +211,46 @@ function showDetails(name) {
 function closeModal() {
     document.getElementById("detailsModal").style.display = "none";
 }
+function openApplyModal(scholarshipName) {
+    document.getElementById("detailsModal").style.display = "none";
+    document.getElementById("applyModal").style.display = "block";
+    document.getElementById("applyScholarshipName").value = scholarshipName;
+}
+
+function closeApplyModal() {
+    document.getElementById("applyModal").style.display = "none";
+}
+
+const applicationForm = document.getElementById("applicationForm");
+
+if (applicationForm) {
+    applicationForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let application = {
+            scholarship: document.getElementById("applyScholarshipName").value,
+            name: document.getElementById("studentName").value,
+            email: document.getElementById("studentEmail").value,
+            phone: document.getElementById("studentPhone").value,
+            course: document.getElementById("studentCourse").value,
+            marks: document.getElementById("studentMarks").value,
+            income: document.getElementById("studentIncome").value,
+            category: document.getElementById("studentCategory").value,
+            address: document.getElementById("studentAddress").value
+        };
+
+        let applications = JSON.parse(localStorage.getItem("applications")) || [];
+        applications.push(application);
+
+        localStorage.setItem("applications", JSON.stringify(applications));
+
+        document.getElementById("applyResult").innerHTML = `
+            <div class="success">
+                <h3>Application Submitted Successfully ✅</h3>
+                <p>You applied for <b>${application.scholarship}</b></p>
+            </div>
+        `;
+
+        applicationForm.reset();
+    });
+}
